@@ -1,0 +1,34 @@
+RewriteEngine On
+
+# 옛 공용 사이트 주소 → 지점별 새 페이지 (301)
+RewriteRule ^theme/hp005/page/sub1_1_1\.php$ https://baro-dream.co.kr/about.html [R=301,L]
+RewriteRule ^theme/hp005/page/sub1_2_1s\.php$ https://baro-dream.co.kr/location.html [R=301,L]
+RewriteRule ^theme/hp005/page/sub1_1_2\.php$ https://baro-dream.co.kr/sedation.html [R=301,L]
+RewriteRule ^theme/hp005/page/subimplant2\.php$ https://baro-dream.co.kr/implant.html [R=301,L]
+RewriteRule ^theme/hp005/page/subimplant6\.php$ https://barodreamhn.com/implant/full [R=301,L]
+RewriteRule ^theme/hp005/page/nopain2\.php$ https://baro-dream.co.kr/cavity.html [R=301,L]
+RewriteRule ^theme/hp005/page/gum\.php$ https://baro-dream.co.kr/gum.html [R=301,L]
+RewriteRule ^theme/hp005/page/privacy\.php$ https://baro-dream.co.kr/privacy.html [R=301,L]
+RewriteRule ^theme/hp005/page/sub1_1_3\.php$ https://barodreamdental.kr/prosthesis.html [R=301,L]
+RewriteRule ^theme/hp005/page/dentaldigital\.php$ https://barodreamdental.kr/prosthesis.html [R=301,L]
+RewriteRule ^theme/hp005/page/brace1\.php$ https://barodreamdental.kr/ortho.html [R=301,L]
+RewriteRule ^theme/hp005/page/brace3\.php$ https://barodreamdental.kr/ortho-adult.html [R=301,L]
+RewriteRule ^theme/hp005/page/hbrace\.php$ https://barodreamdental.kr/ortho.html [R=301,L]
+RewriteRule ^theme/hp005/page/implantbrace\.php$ https://barodreamdental.kr/ortho-adult.html [R=301,L]
+RewriteRule ^theme/hp005/page/joint\.php$ https://barodreamdental.kr/tmj.html [R=301,L]
+RewriteRule ^theme/hp005/page/media1\.php$ https://barodreamdental.kr/news.html [R=301,L]
+RewriteRule ^theme/hp005/page/sub1_2_1h\.php$ https://barodreamhn.com/ [R=301,L]
+RewriteRule ^theme/hp005/page/nopain1\.php$ https://barodreamhn.com/special/sedation [R=301,L]
+RewriteRule ^theme/hp005/page/subimplant3\.php$ https://barodreamhn.com/implant/navigation [R=301,L]
+RewriteRule ^theme/hp005/page/subimplant5\.php$ https://barodreamhn.com/implant/full [R=301,L]
+RewriteRule ^theme/hp005/page/oneday\.php$ https://barodreamhn.com/general/root-canal [R=301,L]
+RewriteRule ^bbs/login\.php - [G,L]
+RewriteRule ^bbs/register\.php - [G,L]
+RewriteRule ^bbs/ - [G,L]
+
+# 나머지 옛 테마 경로는 홈으로
+RewriteRule ^theme/ / [R=301,L]
+RewriteRule ^page\.php$ / [R=301,L]
+
+ErrorDocument 404 /404.html
+ErrorDocument 410 /410.html

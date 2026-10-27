@@ -1,0 +1,30 @@
+# 옛 공용 사이트(baro-dream.co.kr) 주소 → 지점별 새 페이지
+# 형식: 옛경로  목적지  상태코드
+
+/theme/hp005/page/sub1_1_1.php  https://baro-dream.co.kr/about.html  301
+/theme/hp005/page/sub1_2_1s.php  https://baro-dream.co.kr/location.html  301
+/theme/hp005/page/sub1_1_2.php  https://baro-dream.co.kr/sedation.html  301
+/theme/hp005/page/subimplant2.php  https://baro-dream.co.kr/implant.html  301
+/theme/hp005/page/subimplant6.php  https://barodreamhn.com/implant/full  301
+/theme/hp005/page/nopain2.php  https://baro-dream.co.kr/cavity.html  301
+/theme/hp005/page/gum.php  https://baro-dream.co.kr/gum.html  301
+/theme/hp005/page/privacy.php  https://baro-dream.co.kr/privacy.html  301
+/theme/hp005/page/sub1_1_3.php  https://barodreamdental.kr/prosthesis.html  301
+/theme/hp005/page/dentaldigital.php  https://barodreamdental.kr/prosthesis.html  301
+/theme/hp005/page/brace1.php  https://barodreamdental.kr/ortho.html  301
+/theme/hp005/page/brace3.php  https://barodreamdental.kr/ortho-adult.html  301
+/theme/hp005/page/hbrace.php  https://barodreamdental.kr/ortho.html  301
+/theme/hp005/page/implantbrace.php  https://barodreamdental.kr/ortho-adult.html  301
+/theme/hp005/page/joint.php  https://barodreamdental.kr/tmj.html  301
+/theme/hp005/page/media1.php  https://barodreamdental.kr/news.html  301
+/theme/hp005/page/sub1_2_1h.php  https://barodreamhn.com/  301
+/theme/hp005/page/nopain1.php  https://barodreamhn.com/special/sedation  301
+/theme/hp005/page/subimplant3.php  https://barodreamhn.com/implant/navigation  301
+/theme/hp005/page/subimplant5.php  https://barodreamhn.com/implant/full  301
+/theme/hp005/page/oneday.php  https://barodreamhn.com/general/root-canal  301
+/bbs/login.php  /410.html  410
+/bbs/register.php  /410.html  410
+/bbs/*  /410.html  410
+
+/theme/*  /  301
+/page.php  /  301

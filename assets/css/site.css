@@ -1,0 +1,192 @@
+/* 바로드림치과의원 시화점 — site.css (DESIGN.md 기준) */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none !important;animation:none !important}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-sans);font-size:var(--fs-body);line-height:var(--lh-body);word-break:keep-all;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--text);text-decoration-thickness:1px;text-underline-offset:3px;-webkit-tap-highlight-color:transparent}
+a,button,summary{touch-action:manipulation}
+h1,h2,h3{text-wrap:balance}
+[id]{scroll-margin-top:88px}
+a:hover{color:var(--accent-deep)}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--surface);padding:8px 12px;border-radius:6px;z-index:999}
+.skip:focus{left:8px}
+h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;line-height:var(--lh-tight);margin:0;letter-spacing:-0.005em}
+h1{font-size:var(--fs-h1)}h2{font-size:var(--fs-h2)}h3{font-size:var(--fs-h3)}
+p{margin:0}
+.wrap{max-width:var(--container);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+.prose{max-width:var(--prose)}
+.prose p{margin:0 0 1.1em}
+.prose h2{margin:2.2em 0 .7em}
+.prose h3{margin:1.6em 0 .5em}
+.prose ul,.prose ol{margin:0 0 1.2em;padding-left:1.3em}
+.prose li{margin:.3em 0}
+.sec{padding:var(--section) 0}
+.sec-alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-tint{background:var(--bg-2)}
+.muted{color:var(--text-2)}
+.small{font-size:var(--fs-small)}
+.caption{font-size:var(--fs-caption);color:var(--text-2)}
+.num{font-variant-numeric:tabular-nums}
+.mark{background:linear-gradient(transparent 55%,var(--accent-soft) 55%)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:var(--btn-h);padding:0 28px;border-radius:var(--r-pill);font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-family:inherit}
+.btn-p{background:var(--accent);color:var(--accent-ink)}.btn-p:hover{background:var(--accent-hover);color:var(--accent-ink)}
+.btn-s{border-color:var(--brand);color:var(--text);background:transparent}.btn-s:hover{background:var(--bg-2);color:var(--text)}
+.btn-sm{min-height:42px;padding:0 18px;font-size:15px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card)}
+.ph{background:#EAE5DC;color:var(--text-2);display:flex;align-items:center;justify-content:center;text-align:center;font-size:14px;padding:16px;border-radius:var(--r-card);min-height:160px}
+figure{margin:0}
+figure img{border-radius:var(--r-card)}
+figcaption{font-size:var(--fs-caption);color:var(--text-2);margin-top:8px}
+.grid{display:grid;gap:32px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g5-7{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.g6-6{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:900px){.g5{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:720px){.g2,.g5-7,.g6-6,.g5{grid-template-columns:minmax(0,1fr)}.grid{gap:24px}}
+
+/* 상단 */
+.topbar{background:var(--surface);border-bottom:1px solid var(--line);font-size:13px;color:var(--text-2)}
+.topbar .wrap{display:flex;justify-content:flex-end;gap:20px;padding-top:6px;padding-bottom:6px;min-height:0}
+.topbar a{text-decoration:none;font-weight:600;color:var(--text)}
+.hdr{background:var(--surface);border-bottom:1px solid var(--line);position:relative;z-index:50}
+.hdr>.wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{height:44px;width:auto}
+.logo span{font-size:15px;font-weight:500;color:var(--text-2);border-left:1px solid var(--line);padding-left:12px}
+.nav{display:flex;gap:30px;margin:0;padding:0;list-style:none}
+.nav>li{position:relative}
+.nav>li>a{display:block;text-decoration:none;font-size:15px;font-weight:500;padding:24px 0;border-bottom:3px solid transparent}
+.nav>li>a:hover,.nav>li>a[aria-current=page],.nav>li.is-active>a{border-bottom-color:var(--accent);color:var(--text)}
+.nav .sub{position:absolute;left:50%;transform:translateX(-50%);top:100%;min-width:220px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px;margin:0;list-style:none;display:none;flex-direction:column}
+.nav>li:hover .sub,.nav>li:focus-within .sub{display:flex}
+.nav .sub a{display:block;padding:10px 14px;border-radius:6px;text-decoration:none;font-size:14px;white-space:nowrap}
+.nav .sub a:hover{background:var(--bg-2)}
+.hdr-tel{display:inline-flex}
+.menu-btn{display:none;width:44px;height:44px;align-items:center;justify-content:center;background:transparent;border:1.5px solid var(--brand);border-radius:var(--r-pill);cursor:pointer}
+.drawer{display:none}
+@media (max-width:960px){
+  .topbar{display:none}
+  .nav{display:none}
+  .hdr-tel.btn{min-height:44px;padding:0;width:44px;border-radius:var(--r-pill)}
+  .hdr-tel .t{display:none}
+  .menu-btn{display:inline-flex}
+  .hdr .wrap{min-height:64px}
+  .logo img{height:36px}
+  .drawer{display:block;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-top:3px solid var(--accent);max-height:0;overflow:hidden;transition:max-height .25s ease}
+  .drawer.open{max-height:85vh;overflow:auto;overscroll-behavior:contain;border-bottom:1px solid var(--line)}
+  .drawer details{border-top:1px solid var(--line)}
+  .drawer summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;font-size:17px;font-weight:600;cursor:pointer}
+  .drawer summary::-webkit-details-marker{display:none}
+  .drawer summary::after{content:"+";color:var(--text-2)}
+  .drawer details[open] summary::after{content:"−"}
+  .drawer a{display:block;text-decoration:none;font-size:15px;padding:11px 20px 11px 32px;color:var(--text-2);background:var(--bg)}
+  .drawer .d-foot{padding:16px 20px;border-top:1px solid var(--line);font-size:13px;color:var(--text-2);line-height:1.6}
+}
+
+/* 히어로 */
+.hero{padding:80px 0 72px}
+.hero h1{font-size:var(--fs-hero)}
+.hero .lead{font-size:var(--fs-body);max-width:30em;margin:24px 0 8px}
+.hero .by{color:var(--text-2);font-size:15px;margin:0 0 24px}
+.hero .ask{color:var(--text-2);font-size:15px;margin-top:16px}
+.page-hero{padding:56px 0 40px;border-bottom:1px solid var(--line);background:var(--surface)}
+.crumb{font-size:13px;color:var(--text-2);margin-bottom:12px}
+.crumb a{color:var(--text-2);text-decoration:none}
+.crumb a:hover{color:var(--accent-deep)}
+.page-hero .lead{max-width:34em;margin-top:14px;color:var(--text-2)}
+
+/* 진료시간 */
+.hours-strip{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:15px}
+.hours-strip .wrap{display:flex;gap:36px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
+.hours-strip b{font-weight:600}
+table.hours{border-collapse:collapse;width:100%;font-size:var(--fs-small)}
+table.hours th,table.hours td{text-align:left;padding:10px 0;border-top:1px solid var(--line)}
+table.hours th{font-weight:500;width:36%}
+table.hours tr:last-child th,table.hours tr:last-child td{border-bottom:1px solid var(--line)}
+
+/* 디렉터리 */
+.dir h3{font-size:20px;padding-bottom:10px;border-bottom:2px solid var(--brand);margin-bottom:8px}
+.dir a{display:block;text-decoration:none;font-size:15px;padding:8px 0;border-bottom:1px solid var(--line)}
+.dir a:hover{color:var(--accent-deep)}
+.dir .note{font-size:14px;color:var(--text-2);line-height:1.7;margin-top:10px}
+
+/* 의료진 */
+.doc{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:24px;align-items:start;padding:24px}
+.doc h3{font-size:22px}.doc h3 small{font-family:var(--font-sans);font-size:14px;font-weight:500;color:var(--text-2);margin-left:6px}
+.doc .spec{font-weight:600;font-size:15px;margin:6px 0 8px}
+.doc .cred{font-size:14px;color:var(--text-2);line-height:1.7}
+.doc .q{font-family:var(--font-serif);font-size:15px;line-height:1.7;margin:10px 0 0}
+@media (max-width:720px){.doc{grid-template-columns:110px minmax(0,1fr);gap:14px;padding:14px}.doc h3{font-size:19px}}
+.cred-list{list-style:none;margin:0;padding:0}
+.cred-list li{padding:9px 0 9px 16px;position:relative;border-bottom:1px solid var(--line);font-size:15px;color:var(--text-2)}
+.cred-list li::before{content:"·";position:absolute;left:2px;color:var(--accent-deep);font-weight:700}
+.cred-list li:first-child{border-top:1px solid var(--line)}
+
+/* 목록 */
+.list a{display:grid;grid-template-columns:84px minmax(0,1fr) 96px;gap:16px;align-items:baseline;text-decoration:none;padding:13px 0;border-top:1px solid var(--line);font-size:15px}
+.list a:last-child{border-bottom:1px solid var(--line)}
+.list .tag,.list .date{font-size:13px;color:var(--text-2)}
+.list .date{text-align:right}
+@media (max-width:720px){.list a{grid-template-columns:minmax(0,1fr) 70px}.list .tag{display:none}}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:24px}
+.sec-head a{font-size:14px}
+
+/* FAQ */
+.faq details{border-top:1px solid var(--line);padding:16px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{font-family:var(--font-serif);font-weight:600;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--text-2);flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{margin:10px 0 0;font-size:15px;line-height:1.7}
+
+/* 안내 상자 */
+.notice{background:var(--accent-soft);border-radius:var(--r-card);padding:20px 24px;font-size:15px;line-height:1.7}
+.notice b{font-weight:600}
+.notice-strong{border:2px solid var(--accent);background:var(--surface)}
+.notice-strong h2{font-size:20px;margin-bottom:8px}
+
+/* 치료 페이지 */
+.tx-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--text-2);padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:40px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{position:relative;padding:14px 0 14px 44px;border-top:1px solid var(--line);counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:14px;width:28px;height:28px;border-radius:50%;background:var(--bg-2);color:var(--text);font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;font-family:var(--font-sans)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps b{font-weight:600;display:block;margin-bottom:2px}
+.related{display:flex;gap:10px;flex-wrap:wrap}
+.related a{text-decoration:none;font-size:14px;padding:9px 14px;border:1px solid var(--line);border-radius:var(--r-pill);background:var(--surface)}
+.related a:hover{border-color:var(--brand)}
+.byline{font-size:13px;color:var(--text-2);margin-top:32px;padding-top:16px;border-top:1px solid var(--line)}
+
+/* CTA */
+.cta{background:var(--bg-2);border-top:1px solid var(--line)}
+.cta .wrap{padding-top:48px;padding-bottom:48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{font-size:24px}
+.cta p{color:var(--text-2);margin-top:6px}
+
+/* 푸터 */
+.ftr{background:var(--brand);color:#E6E8EB}
+.ftr .wrap{padding-top:44px;padding-bottom:36px}
+.ftr-menu{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:24px;margin-bottom:36px}
+.ftr-menu h3{font-family:var(--font-sans);font-size:14px;font-weight:600;color:#B9BEC5;padding-bottom:8px;border-bottom:1px solid #6B717A;margin-bottom:10px}
+.ftr-menu a{display:block;color:#E6E8EB;text-decoration:none;font-size:14px;padding:4px 0}
+.ftr-menu a:hover{color:#FFFFFF}
+.ftr-info{border-top:1px solid #6B717A;padding-top:20px;font-size:13px;line-height:1.7}
+.ftr-info b{display:block;font-size:15px;color:#FFFFFF;margin-bottom:6px}
+.ftr-info .legal{color:#B9BEC5;margin-top:8px}
+.ftr-info .legal a{color:#B9BEC5}
+@media (max-width:900px){.ftr-menu{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:720px){.ftr-menu{grid-template-columns:repeat(2,minmax(0,1fr))}.ftr .wrap{padding-bottom:110px}}
+
+/* 모바일 고정 띠 */
+.mbar{display:none}
+@media (max-width:720px){
+  .mbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);z-index:60;padding-bottom:env(safe-area-inset-bottom)}
+  .mbar a{text-decoration:none;text-align:center;padding:16px 0;font-size:14px;font-weight:600;border-left:1px solid var(--line)}
+  .mbar a:first-child{background:var(--accent);border-left:0}
+}

@@ -1,0 +1,25 @@
+old_path,destination,code,branch,note
+/theme/hp005/page/sub1_1_1.php,https://baro-dream.co.kr/about.html,301,시화,바로드림 특별함 → 시화점 병원소개
+/theme/hp005/page/sub1_2_1s.php,https://baro-dream.co.kr/location.html,301,시화,시화점 소개 → 시화점 진료시간·오시는 길
+/theme/hp005/page/sub1_1_2.php,https://baro-dream.co.kr/sedation.html,301,시화,의식하진정법(메뉴) → 시화점 의식하진정법
+/theme/hp005/page/subimplant2.php,https://baro-dream.co.kr/implant.html,301,시화,임플란트 → 시화점 임플란트
+/theme/hp005/page/subimplant6.php,https://barodreamhn.com/implant/full,301,향남,디지털 올온덴쳐 → 향남점 전체 임플란트
+/theme/hp005/page/nopain2.php,https://baro-dream.co.kr/cavity.html,301,시화,통증최소화 충치치료 → 시화점 충치치료
+/theme/hp005/page/gum.php,https://baro-dream.co.kr/gum.html,301,시화,흔들리는 잇몸치료 → 시화점 잇몸치료
+/theme/hp005/page/privacy.php,https://baro-dream.co.kr/privacy.html,301,시화,개인정보처리방침
+/theme/hp005/page/sub1_1_3.php,https://barodreamdental.kr/prosthesis.html,301,안산,디지털 자체 기공실 → 안산점 보철치료(원내 기공소)
+/theme/hp005/page/dentaldigital.php,https://barodreamdental.kr/prosthesis.html,301,안산,디지털 보철치료 → 안산점 보철치료
+/theme/hp005/page/brace1.php,https://barodreamdental.kr/ortho.html,301,안산,치아교정·성장기 교정 → 안산점 치아교정
+/theme/hp005/page/brace3.php,https://barodreamdental.kr/ortho-adult.html,301,안산,브라켓 치아교정 → 안산점 성인교정
+/theme/hp005/page/hbrace.php,https://barodreamdental.kr/ortho.html,301,안산,부분교정 → 안산점 치아교정
+/theme/hp005/page/implantbrace.php,https://barodreamdental.kr/ortho-adult.html,301,안산,임플란트+교정 → 안산점 성인교정
+/theme/hp005/page/joint.php,https://barodreamdental.kr/tmj.html,301,안산,턱관절 치료 → 안산점 턱관절
+/theme/hp005/page/media1.php,https://barodreamdental.kr/news.html,301,안산,바로드림 미디어 → 안산점 언론보도
+/theme/hp005/page/sub1_2_1h.php,https://barodreamhn.com/,301,향남,향남점 소개 → 향남점 홈
+/theme/hp005/page/nopain1.php,https://barodreamhn.com/special/sedation,301,향남,의식하진정법·단계별 통증케어 → 향남점 의식하진정법
+/theme/hp005/page/subimplant3.php,https://barodreamhn.com/implant/navigation,301,향남,네비게이션 임플란트 → 향남점 네비게이션 임플란트
+/theme/hp005/page/subimplant5.php,https://barodreamhn.com/implant/full,301,향남,전체 임플란트 → 향남점 전체 임플란트
+/theme/hp005/page/oneday.php,https://barodreamhn.com/general/root-canal,301,향남,신경치료 → 향남점 신경치료
+/bbs/login.php,,410,없음,회원 기능 폐지
+/bbs/register.php,,410,없음,회원 기능 폐지
+/bbs/,,410,없음,게시판 전체 폐지
