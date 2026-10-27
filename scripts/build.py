@@ -28,8 +28,10 @@ NAV = [
   ('심미·턱관절', 'whitening.html', [('치아미백','whitening.html'),('라미네이트','laminate.html'),('앞니 레진','resin-front.html'),('턱관절 치료','tmj.html')]),
   ('의료진', 'doctors.html', [('의료진 소개','doctors.html'),('이진학 원장','doctor-lee.html'),('한지상 원장','doctor-han.html'),('고수연 원장','doctor-ko.html')]),
   ('커뮤니티', 'notice.html', [('증상으로 찾기','symptoms.html'),('치과 용어사전','dictionary/index.html'),('공지사항','notice.html'),('칼럼','column.html'),('자주 묻는 질문','faq.html')]),
-  ('오시는 길', 'location.html', [('진료시간·오시는 길','location.html'),('시흥 치과','siheung-dental.html'),('정왕동 치과','jeongwang-dental.html'),('배곧에서 오시는 길','baegot-dental.html'),('시화 치과','sihwa-dental.html'),('시흥 임플란트','siheung-implant.html'),('시흥 야간진료 치과','siheung-night-dental.html')]),
+  ('오시는 길', 'location.html', []),
 ]
+# 지역 안내 페이지 — 상단 메뉴에는 넣지 않고 푸터·오시는 길 하단에서만 연결
+AREA_LINKS = [('시흥 치과','siheung-dental.html'),('정왕동 치과','jeongwang-dental.html'),('배곧에서 오시는 길','baegot-dental.html'),('시화 치과','sihwa-dental.html'),('시흥 임플란트','siheung-implant.html'),('시흥 야간진료 치과','siheung-night-dental.html')]
 
 def esc(s): return html.escape(s, quote=True)
 
@@ -59,6 +61,7 @@ def footer_menu_html():
     for label, href, subs in NAV:
         items = subs if subs else [(label, href)]
         out.append(f'<div><h3>{label}</h3>' + ''.join(f'<a href="{h}">{l}</a>' for l, h in items) + '</div>')
+    out.append('<div><h3>지역 안내</h3>' + ''.join(f'<a href="{h}">{l}</a>' for l, h in AREA_LINKS) + '</div>')
     out.append('</div>')
     return ''.join(out)
 
