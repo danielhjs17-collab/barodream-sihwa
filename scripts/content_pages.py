@@ -146,9 +146,10 @@ def PAGES(site, hours_table, page_hero, faq_html, ld_breadcrumb, ld_faq):
   <div>{img_or_ph('assets/img/exterior.jpg','성담스퀘어 건물 외관','[지도 또는 건물 외관 실제 사진]','height:360px')}
     <p class="caption" style="margin-top:12px">지도는 네이버 지도 링크로 연결됩니다. 길찾기 앱에서는 "바로드림치과의원 시화점" 또는 도로명 주소로 검색해 주세요.</p></div>
 </div>
-<div style="margin-top:56px"><h2 style="margin-bottom:12px">어디서 오시나요?</h2>
-<p class="small muted" style="margin-bottom:16px">동네별로 오시는 길과 자주 묻는 내용을 따로 정리했습니다.</p>
-<div class="related" style="gap:12px">''' + ''.join(f'<a href="{h}">{l}</a>' for l, h in [('시흥 치과','siheung-dental.html'),('정왕동 치과','jeongwang-dental.html'),('배곧에서 오시는 길','baegot-dental.html'),('시화 치과','sihwa-dental.html'),('시흥 임플란트','siheung-implant.html'),('시흥 야간진료 치과','siheung-night-dental.html')]) + '''</div></div>
+<div style="margin-top:56px"><h2 style="margin-bottom:12px">동네별 오시는 길</h2>
+<p class="small muted" style="margin-bottom:16px">출발하는 동네를 고르면 그 동네 기준으로 가는 방법과 자주 묻는 내용을 보실 수 있습니다.</p>
+<div class="related" style="gap:12px">''' + ''.join(f'<a href="{h}">{l}</a>' for l, h in [('시흥 시내에서','siheung-dental.html'),('정왕동에서','jeongwang-dental.html'),('배곧에서','baegot-dental.html'),('시화에서','sihwa-dental.html')]) + '''</div>
+<p class="small muted" style="margin-top:20px">함께 보기: <a href="siheung-night-dental.html">수요일 야간진료 안내</a> · <a href="siheung-implant.html">시흥에서 임플란트 상담 받으실 때</a></p></div>
 </div></section>'''
     p['ld'] = [ld_breadcrumb([('홈','index.html'),('오시는 길','location.html')])]; p['prio']='0.9'; P.append(p)
 
