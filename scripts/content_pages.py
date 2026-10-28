@@ -173,7 +173,6 @@ def PAGES(site, hours_table, page_hero, faq_html, ld_breadcrumb, ld_faq):
     <h2 style="margin:0 0 6px;font-size:22px">{esc(b["name"])}</h2>
     <p class="small muted" style="margin:0 0 14px">{esc(b.get("note",""))}</p>
     <p class="small" style="margin:0 0 6px">{esc(b["address"])}</p>
-    <p class="small" style="margin:0 0 6px">{esc(b["hours"])}</p>
     <p class="small" style="margin:0 0 18px">전화 <a href="tel:{esc(b["phone"].replace('-',''))}">{esc(b["phone"])}</a></p>
     <a class="btn btn-s" href="{esc(b["url"])}" rel="noopener">{esc(b["name"])} 홈페이지</a>
   </div>''' for b in br)
